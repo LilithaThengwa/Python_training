@@ -60,8 +60,6 @@ marks = [98, 75, 40, 80, 90, 45, 80, 60]
 scrambledmsg = "world the save to time no is there"
 
 scrambleList = scrambledmsg.split(" ")
+print(" ".join(scrambleList[::-1])) ##reverse the list
 
-# scrambleList.sort(reverse = True)
-unscrambled = scrambleList[::-1]
-print(scrambleList)
 
