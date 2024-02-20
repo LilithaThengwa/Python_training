@@ -51,3 +51,7 @@ else:
   else:
     print("incorrect.")
 
+
+x = " "
+print(x.strip())
+
