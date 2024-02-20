@@ -20,6 +20,6 @@ requested = input("Which flavour: ")
 # else:
 #  print("Sorry we don't have it")
 
-y = "yes we have it" if requested in shop_stock else "Sorry we don't have it"
+y = "yes we have it" if requested in shop_stock else "Sorry we don't have it"##ternary operator
 
 print(y)

@@ -1,3 +1,11 @@
+#Strings are immutable, the original string doesn't change.
+# .upper(), .lower(), .title(), .capitalize().
+# .find() returns the index(interger) and returns -1 if not found.
+#strip() removes whitespace from the beginning and end of the string.
+#strip("") removes the specified character.
+# rstript() removes the specified character from the end. #lstrip() removes the specified character from the beginning,
+# .strip().rstip().upper() is dot chaining.
+
 # #task1
 # message = "    🚨🔍📱🔑secret_code✌️"
 # code = "SECRET_CODE✌️"
