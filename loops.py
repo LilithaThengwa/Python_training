@@ -29,7 +29,17 @@ avengers = [
     "Thor",
 ]
 
-count = [len(avenger) for avenger in avengers ]
-print(count)
+#task3
 
+# filtered_names = []
+
+# for avenger in avengers:
+#   if len(avenger) > 10:
+#     filtered_names.append(avenger)
+# print(filtered_names)
+
+# with list comprehension
+filtered_names = [avenger for avenger in avengers if len(avenger) > 10]
+
+print(filtered_names)
 
