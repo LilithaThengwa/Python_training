@@ -39,7 +39,27 @@ avengers = [
 # print(filtered_names)
 
 # with list comprehension
-filtered_names = [avenger for avenger in avengers if len(avenger) > 10]
+# filtered_names = [avenger for avenger in avengers if len(avenger) > 10]
 
-print(filtered_names)
+# print(filtered_names)
+
+#21/02/24 exercises
+
+# numbers = [8, 5, 7, 4, 6, 2]
+
+# oddEven = ["Even" if i % 2 == 0 else "odd" for i  in numbers]
+
+# print(oddEven)
+
+# With for loop
+numbers = [8, 5, 7, 4, 6, 2]
+numbers_copy = []
+
+for num in numbers:
+  numbers_copy.append("Even" if num % 2 == 0 else "odd")
+
+print(numbers_copy)
+
+
+
 
