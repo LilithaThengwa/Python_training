@@ -86,32 +86,39 @@ inventory = [
 
 #==============================================================
 
-employees = [
-  {"name": "Alex", "experience": 2},
-  {"name": "Gemma"},
-  {"name": "Rashay", "experience": 4},
-  {"name": "Thato"}
-]
+# employees = [
+#   {"name": "Alex", "experience": 2},
+#   {"name": "Gemma"},
+#   {"name": "Rashay", "experience": 4},
+#   {"name": "Thato"}
+# ]
 
 # for employee in employees: #update employee experience
 #   employee["experience"] = employee.get("experience", 0) + 1
 
 # print(employees)
 
-for employee in employees:# update status based on experience
-  if employee.get('experience', 0) >= 5:
-    employee['status'] = "Senior"
-  elif 3 <= employee.get('experience', 0) < 5: 
-    employee['status'] = "Mid-Level"
-  else:
-    employee['status'] = "Junior"
-print(employees)
+# for employee in employees:# update status based on experience
+#   if employee.get('experience', 0) >= 5:
+#     employee['status'] = "Senior"
+#   elif 3 <= employee.get('experience', 0) < 5: 
+#     employee['status'] = "Mid-Level"
+#   else:
+#     employee['status'] = "Junior"
+# print(employees)
 
-# # Copy
+#==============================================================
+
+# # Copying and merging dictionaries with unpacking
 # movie = {
 #   "name": "Mr Bones",
 #   "year": 2001
 # }
+
+# detail = {"actor": "Leon Schuster", "Director": "Gray Hofmeyr"}
+
+# movie_detail = {**movie, **detail} #merging dictionaries
+#print(movie_detail)
 
 # # Make copy of dicitonary
 # movie_copy1 = movie.copy()
