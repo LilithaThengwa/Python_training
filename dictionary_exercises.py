@@ -21,6 +21,7 @@
 #sorted_rated = sorted(rated)#sortted
 # print(rated)
 
+#==============================================================
 
 # task1
 
@@ -40,73 +41,25 @@ inventory = [
 
 # print(inventory)
 
-# prod_name = input("Enter product name: ")
-# list = []
+#==============================================================
 
+# prod_name = "orange"
+# quantity = 10
+# price = 0.30
+
+# new_product = {"name": prod_name, "quantity": quantity, "price": price} 
+ 
 # for item in inventory:
-#   list.append(item["name"])
-
-# if(prod_name in list):
-#   quantity = int(input("Enter quantity: "))
-#   price = float(input("Enter price: "))
-#   for item in inventory:
-#     item["quantity"] = item["quantity"] + quantity
-#     item["price"] = item["price"] + price
-    
-# else:
-#   quantity = int(input("Enter quantity: "))
-#   price = float(input("Enter price: "))
-#   product = {"name": prod_name, "quantity": quantity, "price": price} 
-#   inventory.append(product)
-   
-# print(inventory)
-
-# prod_name = input("Enter product name: ")
-
-# for item in inventory:
-#     if(prod_name == item["name"]):
-#       quantity = int(input("Enter quantity: "))
-#       price = float(input("Enter price: "))
-#       item["quantity"] = item["quantity"] + quantity
-#       item["price"] = price
-#       break
-      
-# else:
-#   quantity = int(input("Enter quantity: "))
-#   price = float(input("Enter price: "))
-#   product = {"name": prod_name, "quantity": 
-#   quantity, "price": price} 
-#   inventory.append(product)
-
-# print(inventory)
-
-# product_name = input("What is the product name? ")
-# product_quantity = int(input("What is the quantity? "))
-# product_price = float(input("What is the price? "))
-
-# for product in inventory:
-#   if(product["name"] == product_name):
-#     product["quantity"] += product_quantity
-#     product["price"] = product_price
+#   if (item["name"] == prod_name):
+#     item["quantity"] += quantity
+#     item["price"] += price
 #     break
-
-# print(inventory)
-
-# newname = input("What is the product name? ")
-# newquantity = int(input("What is the quantity? "))
-# newprice = float(input("What is the price? "))
-# addproduct = True
-# for product in inventory:
-#   if (newname == product["name"]):
-#     print(product["name"])
-#     product["quantity"] += newquantity
-#     product["price"] = newprice
-#     addproduct = False
-#     break
-# if (addproduct):
-#   new_product = {"name": newname, "quantitiy": newquantity, "price": newprice}
+# else:
 #   inventory.append(new_product)
-# print(inventory)
+
+
+#==============================================================
+
 
 # task
 
@@ -125,23 +78,13 @@ inventory = [
 # ]
 
 # blacklist = ["Dave", "Eve"]
-# guestlist = []
+# PASS_CODE = "VIP123"
 
-# for guest in guests:
-#   guestlist.append(guest["name"])
+# guestlist = [guest["name"] for guest in guests if guest["name"] not in blacklist and guest["code"] == PASS_CODE and guest["age"] >= 21]
 
-# for guest in guests:
-#   if guest["name"] in blacklist:
-#       guestlist.remove(guest["name"])
-    
-#   elif guest["age"] < 18:
-#       guestlist.remove(guest["name"])
-    
-#   elif guest["code"] != "VIP123":
-#       guestlist.remove(guest["name"])
-# print(guestlist)
+# print(guestlis)# filtered guest names
 
-# list = [guest ]
+#==============================================================
 
 employees = [
   {"name": "Alex", "experience": 2},
