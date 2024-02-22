@@ -93,18 +93,18 @@ employees = [
   {"name": "Thato"}
 ]
 
-# for employee in employees:
+# for employee in employees: #update employee experience
 #   employee["experience"] = employee.get("experience", 0) + 1
 
 # print(employees)
 
-for employee in employees:
-  if employee.get('experience', 0) < 3:
-    employee['status'] = "Junior"
-  elif employee.get('experience', 0) < 5: 
+for employee in employees:# update status based on experience
+  if employee.get('experience', 0) >= 5:
+    employee['status'] = "Senior"
+  elif 3 <= employee.get('experience', 0) < 5: 
     employee['status'] = "Mid-Level"
   else:
-    employee['status'] = "Senior"
+    employee['status'] = "Junior"
 print(employees)
 
 # # Copy
@@ -127,3 +127,9 @@ print(employees)
 # # the unpacking is like this
 # # {"rating": 10, "year":2002, "name": "Mr Bones", "year":2001} (2001 overrides!)
 # print(movie_copy4)
+
+#==============================================================
+
+# nums = [90, 50, 80]
+# for idx, num in enumerate(nums):
+#   print(idx, num)#prints index and number
