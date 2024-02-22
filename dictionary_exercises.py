@@ -18,7 +18,9 @@
 
 # rated = [book["title"] for book in books if 
 # book["rating"] >= 4.7] #with list comprehension
+#sorted_rated = sorted(rated)#sortted
 # print(rated)
+
 
 # task1
 
@@ -161,3 +163,24 @@ for employee in employees:
   else:
     employee['status'] = "Senior"
 print(employees)
+
+# # Copy
+# movie = {
+#   "name": "Mr Bones",
+#   "year": 2001
+# }
+
+# # Make copy of dicitonary
+# movie_copy1 = movie.copy()
+
+# # Unpacking Operator * -> List | ** -> Dictionaries
+# movie_copy2 = {**movie, "rating": 10}
+# print(movie_copy2)
+
+# movie_copy3 = {**movie, "rating":10, "year": 2002} # last "year" overrides previous one
+# print(movie_copy3)
+
+# movie_copy4 = {"rating":10, "year": 2002, **movie} # last "year" overrides previous one
+# # the unpacking is like this
+# # {"rating": 10, "year":2002, "name": "Mr Bones", "year":2001} (2001 overrides!)
+# print(movie_copy4)
