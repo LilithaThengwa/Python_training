@@ -154,19 +154,6 @@ employees = [
 # print(employees)
 
 for employee in employees:
-  employee["experience"] = employee.get("experience", 0) + 1
-  if employee["experience"] > 3 and employee["experience"] < 5:
-     employee["status"] = "mid-level"
-
-  elif employee["experience"] > 5:
-    employee["status"] = "senior"
-
-  else:
-    employee["status"] = "junior"
-
-print(employees)
-
-for employee in employees:
   if employee.get('experience', 0) < 3:
     employee['status'] = "Junior"
   elif employee.get('experience', 0) < 5: 
