@@ -9,7 +9,21 @@
 
 # #crud
 # tec_gadgets.add("E-reader")
-# more_gadgets = []
+# more_gadgets = ["Drone", "Selfiestick"]
+# tec_gadgets.update(more_gadgets)
+# tec_gadgets.remove("Drone") # will throw an error if not present
+# tec_gadgets.discard("Drone") # will not throw an error if not present
+
+#======================================================================
+
+# Set operations
+
+# outdoor_activities = {'Hiking', 'Cycling', 'Swimming'}
+# indoor_activities = {'Gaming', 'Reading', 'Cycling'}
+
+# print(indoor_activities.intersection(outdoor_activities))
+# print(indoor_activities.union(outdoor_activities))
+# print(indoor_activities.difference(outdoor_activities))
 
 
 # colors = ["red", "blue", 'red', "green", "pink", "blue"]
