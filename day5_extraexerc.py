@@ -8,3 +8,19 @@
 # Expected Functionality
 # Registering a participant with all details specified.
 # Registering a participant with only the name and email, using default values for the other parameters.
+
+participants = []
+
+def register_participant(name, email, meal_preference="non-vegetarian", needs_accommodation = False):
+  new_participant = {"name": name, "email": email, "meal_preference": meal_preference, "needs_accommodation": needs_accommodation}
+  participants.append(new_participant)
+
+
+def display_registered_participants(registered_participants):
+  for participant in participants:
+    print(f"Name: {participant['name']} \nEmail: {participant['email']} \nMeal Preference: {participant['meal_preference']} \nAccommodation: {participant['needs_accommodation']}")
+
+
+
+register_participant("JJ", "qpmzj@example.com", "vegetarian", True)
+display_registered_participants(participants)
