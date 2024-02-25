@@ -25,3 +25,9 @@
 - ** unpacking operator for dictionaries.
 - get() doesn't throw an error if the value is not found.
 - Iterable only.
+
+# Tuple
+- Immutable, ordered and allow duplicate values.
+- Can add items to it once created.
+- Declaration: mytuple = (1, 2, 3) or mytuple = tuple(()).
+- Indexed.
