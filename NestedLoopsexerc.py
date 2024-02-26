@@ -13,30 +13,32 @@ classes = {
 
 #task 1
 
-stud_ave = []
+# stud_ave = []
 
 # for classs in classes.values(): #values returns values of dictionary as list
 #   for stud in classs:
 #     stud_ave.append(sum(stud["grades"]) / len(stud["grades"]))
 
-# stud_ave = [sum(stud["grades"]) / len(stud["grades"]) for _class in classes.values() for stud in _class] #works
+# # stud_ave = [sum(stud["grades"]) / len(stud["grades"]) for _class in classes.values() for stud in _class] #works
 
-print(stud_ave)
+# print(stud_ave)
 
-#==================================================================
+#================================================================
 
 # Task 2 - Grades per student
 
 # for classs in classes.values():
 #   for stud in classs:
-#     print(f"\n{stud['name']} grades: {stud['grades']} \nand average: {(sum(stud['grades']) / len(stud['grades']))/100:.2%}.")
+#     print(f"\n{stud['name']} grades: {stud['grades']}; average: {(sum(stud['grades']) / len(stud['grades']))/100:.2%}.")
 
-#==================================================================
+#================================================================
 
 # Grades per student, per class
 
-for classs in classes.values():
-  # print(f"\n{classs[0]['name']} grades: {classs[0]['grades']} \n")
-  print(classs)
+# for classs in classes.values():
+#   print(f"\n{classs[0]} \n")
+#   for stud in classs:
+#     print(f"{stud['name']} grades: {stud['grades']}; average: {(sum(stud['grades']) / len(stud['grades']))/100:.2%}.")
+
   # for stud in classs:
   #   print(f"\n{stud['name']} grades: {stud['grades']} \nand average: {(sum(stud['grades']) / len(stud['grades']))/100:.2%}.")
