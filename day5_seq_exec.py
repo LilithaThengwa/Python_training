@@ -56,10 +56,10 @@ sorted_titles3 = list(map(lambda x: x["title"], high_ave))
 
 #==========================================================
 
-#task 4
+# task 4 top 3
 
 sorted_movies = sorted(movie_average, key = lambda x: x["average_rating"], reverse = True)
 
 sorted_titles4 = list(map(lambda x: x["title"], sorted_movies))
 
-print(sorted_titles)
+print(sorted_titles4)
