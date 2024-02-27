@@ -14,17 +14,12 @@ fun() # [10, 10]
 fun() # [10, 10, 10]
 fun() # [10, 10, 10, 10]  
  
-# def fun(nums=None):
-#     if nums is None:
-#         nums = []
-#     nums.append(10)
-#     print(nums)
-
-def fun(nums=[10]):
-    if(nums == []):
-      nums.append(10)
+def fun(nums=None):
+    if nums is None:
+        nums = []
+    nums.append(10)
     print(nums)
-    
+
 # Expectation
 fun() # [10]
 fun() # [10]
