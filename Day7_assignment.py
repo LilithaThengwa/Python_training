@@ -57,6 +57,5 @@ class Bank:
     
     def print_transactions(self):
         for transaction in self.transaction_list:
-            for k, v in transaction:
-              return print(f"{v}")
+            return print(f"{transaction}")
         # return print(self.transaction_list)
