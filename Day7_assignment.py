@@ -1,4 +1,6 @@
 class Invoice:
+    # list_transactions = []
+    # transaction = {}
     def __init__(self, id, date, type, amount, transaction, listtransactions):
         self.id = id
         self.date = date
@@ -14,6 +16,8 @@ class Invoice:
         self.transaction["type"] = self.type
         self.transaction["amount"] = self.amount
         self.listtransactions.append(self.transaction)  
+        # for key, value in self.listtransactions:
+        #     print(key)
 
         return self.listtransactions
 
