@@ -52,14 +52,14 @@ class Bank:
        if(self.__balance >= amount):
           self.__balance -= (amount)
           self.transaction_count += 1
-          self.transaction_list.append({"id": self.transaction_count, "date": datetime.now(), "type": "deposit", "amount": amount})
+          self.transaction_list.append({"id": self.transaction_count, "date": f"{datetime.now().strftime('%B %d, %Y')}", "type": "withdraw", "amount": amount})
           return (f"Succes. {self.display_balance()}")
        else:
             return (f"Failed. {self.display_balance()}")
 
     def deposit(self, amount):
         self.__balance = self.__balance + amount
-        self.transaction_list.append({"id": self.transaction_count, "date": datetime.now(), "type": "deposit", "amount": amount})
+        self.transaction_list.append({"id": self.transaction_count, "date": f"{datetime.now().strftime('%B %d, %Y')}", "type": "deposit", "amount": amount})
         return (f"Succes. Your balance is: R{self.__balance:,}")
     
     def apply_interest(self):
@@ -69,7 +69,9 @@ class Bank:
     #    self.transaction_list.append(self, self.transaction_count, datetime.now(), "withdraw")
     
     def print_transactions(self):
-        return print(self.transaction_list)
+        for transaction in self.transaction_list:
+            return print(f"{transaction}")
+        # return print(self.transaction_list)
 
 gemma = Bank(123, "Gemma", 15_000)
 alex = Bank(456, "Alex", 15_000)
@@ -78,9 +80,8 @@ gemma.withdraw(12000)
 gemma.apply_interest()
 print(gemma.display_balance())
 gemma.print_transactions()
-
-# gemma.deposit(5000)
-
+gemma.deposit(5000)
+gemma.print_transactions()
 # print(gemma.display_balance())
 
 # print(Bank.get_totalaccounts())
