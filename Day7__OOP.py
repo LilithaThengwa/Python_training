@@ -17,19 +17,22 @@
 # # print(ferrari.name, ferrari.wheels)
 # # print(toyota.name, toyota.wheels)
 
+
+#==================================================================================================================================
+
 class Bank:
-    interest = 0.2
+    interest_rate = 0.02
     totalacc = 0
 
     def __init__(self, acc_no, name, balance):
         self.acc_no = acc_no
         self.name = name
-        self.__balance = balance
+        self.__balance = balance #private variable
         Bank.totalacc += 1
 
     @classmethod
     def update_interest_rate(cls, rate):
-        Bank.interest = rate
+        cls.interest_rate = rate
 
     # @classmethod
     # def get_totalaccounts(cls):
@@ -37,7 +40,7 @@ class Bank:
     
     @staticmethod #better
     def get_totalaccounts(cls):
-        return cls.totalacc
+        return f"In total we have {cls.totalacc} accounts"
         
     def display_balance(self):
         return (f"Your balance is: R{self.__balance:,}")
@@ -55,7 +58,7 @@ class Bank:
         return (f"Succes. Your balance is: R{self.__balance:,}")
     
     def apply_interest(self):
-       self.__balance += self.__balance * self.interest
+       self.__balance += self.__balance * self.interest_rate
 
     def getbalance(self):
         return self.__balance
@@ -73,50 +76,34 @@ class Bank:
 
 # print(Bank.get_totalaccounts())
 
-# class SavingsAccount(Bank):
-#     interest = 0.1
+#==========================================================
+    
+class SavingsAccount(Bank):
+    interest_rate = 0.05
 
-    # def __init__(self, acc_no, name, balance):
-    #     super().__init__(acc_no, name, balance)
-    #     self.__balance = balance
-
-    # # def display_balance(self):
-    # #     return (f"Your balance is: R{self.__balance:,}")
-
-    # # def apply_interest(self):
-    # #    self.__balance += self.__balance * SavingsAccount.interest
-
-# class CheckingAccount(Bank):
-#     def __init__(self, acc_no, name, balance):
-#         super().__init__(acc_no, name, balance)
-#         self.__balance = balance
-
-#     def display_balance(self):
-#         return (f"Your balance is: R{self.__balance:,}")
-        
-#     def withdraw(self, amount):
-#        if(self.__balance >= amount + 1):
-#           self.__balance -= (amount + 1)
-#           return (f"Succes. {self.display_balance()}")
-#        else:
-#             return (f"Failed. {self.display_balance()}")
-       
+    def apply_interest(self):
+       super().apply_interest()
 class CheckingAccount(Bank):
-
-    def __init__(self, acc_no, name, balance):
-        super().__init__(acc_no, name, balance)
-
-    def display_balance(self):
-        return (f"Your balance is: R{self.getbalance:,}")
+    transaction_fee = 1
     
     def withdraw(self, amount):
-       withfee = amount + 1
+       withfee = amount + CheckingAccount.transaction_fee
        super().withdraw(withfee)
 
-# gemma = SavingsAccount(123, "Gemma", 15_000)
+    def __str__(self):
+        return f"Account {self.acc_no} owned by {self.name} with balance: R{self.getbalance():,}"
+
+    def __repr__(self):
+        return f"CheckingAccount ('{self.acc_no}','{self.name}', '{self.getbalance():,}'"
+
+    def __add__(self, other):
+        return self.getbalance() + other.getbalance()
+    
+gemma = SavingsAccount(123, "Gemma", 15_000)
 alex = CheckingAccount(126, "Alex", 10_000)
-# gemma.apply_interest()
-# print(gemma.display_balance())
+gemma.apply_interest()
+print(gemma.display_balance())
 alex.withdraw(3_000)
 print(alex.display_balance())
+print(alex.__str__())
 

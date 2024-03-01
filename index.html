@@ -3,9 +3,10 @@
 <head>
 <!-- self closing tags, e.g meta tag and img tag -->
     <meta charset="UTF-8">
-    <!-- below means adapt to phone -->
+    <!-- below means adapt to phone, easily change between color and landscape -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Internal css, use for performance. One round trip. Must not be too large. Max 200 lines. -->
     <style>
         ul{
             color: crimson;
@@ -21,11 +22,31 @@
             font-size: 32px;
             text-align: center;
             text-transform: uppercase;
+            /* Breathing space, small letter size them have a larger line height and vice versa. Improves UX, make it easier tp read. */
+            line-height: 0.7;
+        }
+
+        h2{
+            text-decoration: line-through;
+        }
+
+        h3{
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 10px;
         }
     </style>
+    <!-- External css, most preferred. Separation of concerns, reusability. -->
+    <link rel="stylessheet" href="navigation.css" />
 </head>
 <!-- tags/elements -->
 <body>
+    <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a> <!-- Better way --></li>
+        <li><a href="/selector.html">Selector</a></li>
+        <li><a href="/box-model.html">box model</a></li>
+    </ul>
     <h1>Hello, Sanlam</h1>
     <h2>Hello, Sanlam</h2>
     <h3>Hello, Sanlam</h3>
@@ -34,8 +55,19 @@
     <h6>Hello, Sanlam</h6>
 
     <p>
-        asaasasasasasasas
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, minus officia magnam saepe, tempora aliquid quisquam sed, porro laudantium quis quo possimus corrupti quod odio. Rerum voluptas corporis debitis. Alias.
+        Aut, quos fugiat. Magni reprehenderit minima illo fuga molestias sed ullam illum quod incidunt. Hic recusandae incidunt officiis aliquam voluptate, eius ex excepturi fugit dolore optio consequuntur culpa voluptatem quia.
+        Veniam vel expedita voluptatem sunt doloribus reiciendis consectetur. Quibusdam, voluptatum ea alias molestiae ex porro, provident odio doloremque, quis ratione distinctio asperiores soluta quod numquam enim reprehenderit accusamus quia rerum?
+        Illum unde explicabo delectus. Fuga neque ab perferendis assumenda non eveniet esse ipsum repudiandae qui at nulla a, cum veniam nemo quam aut reprehenderit hic laudantium. Illo deleniti esse tempore!
+        Vero molestias fugiat accusantium sint rerum ea hic suscipit qui. Ad totam harum sint eaque, omnis est sunt hic aut laudantium aspernatur blanditiis itaque nulla velit, pariatur asperiores libero sed.
+        Voluptate error blanditiis ab. Magni culpa distinctio quaerat quibusdam, magnam tempore eligendi accusantium, doloribus eveniet fuga nobis earum saepe autem nihil deleniti a, laboriosam fugit aperiam beatae enim eos ex!
+        Distinctio quasi aliquam praesentium mollitia laborum odit saepe aut, possimus ratione labore inventore nam quod officia molestiae veritatis placeat, culpa nobis nisi delectus! Tenetur unde impedit quibusdam corporis quidem molestiae?
+        Tenetur eos laborum architecto consequatur. Architecto sequi, in, ad nemo adipisci quasi consectetur culpa aspernatur incidunt quidem maiores assumenda dicta animi voluptas, dolor minima corrupti sapiente alias! Rem, hic labore.
+        Eius, possimus? Blanditiis harum, ullam, molestias libero quos odio sint quam vitae mollitia ut nam, nihil ipsum! Consequatur nesciunt, soluta asperiores at possimus, fugit magnam ea dolorem quisquam reprehenderit ratione.
+        Nihil tempora tenetur asperiores! Sequi repudiandae nulla voluptates non repellat perferendis odit quia, est quod provident sint debitis dolorem distinctio officia delectus adipisci. Sit, ab quam similique earum amet tempore?
     </p>
+
+    <h3>GUCCI</h3>
 
     <h2>Hobbies</h2>
     <!-- Two ways to make lists, ul $ ol -->
@@ -50,7 +82,8 @@
     </ul>
 
     <!-- ordered list -->
-    <ol>
+    <!-- inline css. Not preferred -->
+    <ol style="color: orange">
         <!-- list item -->
         <li>Reading</li>
         <li>Gaming</li>

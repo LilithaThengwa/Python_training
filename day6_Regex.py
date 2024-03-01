@@ -39,8 +39,9 @@ result = re.sub(r"(\w+)(\.com)", r"\1.subdomain\2", list_websites)
 names = ["  John Doe  ", "  Jane   Smith", "Alice Johnson  ", "Chris Evans"]
 
 
-output = [re.sub(r'\s*(\w+)\s+(\w+)\s*',r'\2, \1', name) for name in names]
-print(output)
+# output = [re.sub(r'\s*(\w+)\s+(\w+)\s*',r'\2, \1', name) for name in names]
+output = [re.sub(r"(\w+)\s+(\w+)", r"\2, \1", name).strip() for name in names]
+# print(output)
 
 #================================================
 
@@ -49,3 +50,5 @@ print(output)
 # output = re.findall(r'#\w+', post)
 
 # print(output)
+
+print(re.search(r'\^hello', 'hello world').group(0))

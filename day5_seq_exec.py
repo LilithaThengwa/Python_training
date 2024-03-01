@@ -52,7 +52,7 @@ high_ave = list(filter(lambda x: x["average_rating"] >= 4.6, movie_average))
 
 sorted_titles3 = list(map(lambda x: x["title"], high_ave))
 
-# print(sorted_titles3)
+print(sorted_titles3)
 
 #==========================================================
 
@@ -62,4 +62,4 @@ sorted_movies = sorted(movie_average, key = lambda x: x["average_rating"], rever
 
 sorted_titles4 = list(map(lambda x: x["title"], sorted_movies))
 
-print(sorted_titles4)
+# print(sorted_titles4)
