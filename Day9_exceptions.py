@@ -28,7 +28,7 @@ def calculate_age(): #handling logical errors
     except ValueError as e:  
         print("Invalid value type: ", e)
     except Exception as e: #catch all for errors
-        print("You really messed up.")
+        print("You really messed up.", e)
 
 #================================================================================================================================
         
