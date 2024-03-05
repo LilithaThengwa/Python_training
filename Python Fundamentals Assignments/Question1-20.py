@@ -192,34 +192,34 @@ filtered = list(map(lambda title: title["title"].upper(), list(filter(lambda pag
 
 # Expected Task: Implement a class with methods for casting spells, reducing health points, and determining the winner.
 class WizardDuel:
-     health = 100
-     def __init__(self, name):
+     def __init__(self, name, health = 100):
           self.name = name
-          self.health = 100
+          self.health = health
 
-     def cast(self, damage, target):
-          target.health -= damage
+     def cast(self, target, damage):
+          target.reduce_health(damage)
 
-     def lose_health(self, damage):
+     def get_winner(self, target):
+          if (self.health <= 0):
+             return f"{target.name} wins with {target.health} points left!"
+          elif(target.health <= 0):
+             return f"{self.name} wins with {self.health} points left!"
+          else:
+              return f"No winner yet, {target.name} and {self.name} are still at it."
+
+     def reduce_health(self, damage):
          self.health -= damage
          if (self.health < 0):
              self.health = 0
 
-     def duel(self, target):
-         target.cast(self, 50)
-         self.cast(target, 60)
-         target.cast(self, 40)
-         self.cast(target, 60)
-
-         if (self.health <= 0):
-             return f"{self.name} with {self.health} points left!"
-         else:
-             return f"{target.name} with {target.health} points left!"
-
 harry = WizardDuel("Harry")
 draco = WizardDuel("Draco")
+harry.cast(draco, 50)
+draco.cast(harry, 70)
+harry.cast(draco, 60)
+draco.cast(draco, 25)
 
-# print(harry.duel(draco))
+# print(harry.get_winner(draco))
           
 # ===========================================================================================================================
           
