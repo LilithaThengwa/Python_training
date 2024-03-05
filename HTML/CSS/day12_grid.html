@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        background: plum;
+        width: 200px;
+      }
+ 
+      .box2 {
+        background: purple;
+        width: 50px;
+      }
+ 
+      .box3 {
+        background: pink;
+        border: 2px solid palevioletred;
+        width: 100px;
+      }
+ 
+      .container {
+        /* display: flex; */
+        display: grid;
+        /* fr - fractional unit - ratios */
+        /* 1fr 1fr 1fr -> 1:1:1 */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-columns: 1fr 1fr; */
+        /* grid-template-columns: 1fr 2fr; */
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+        /* row-gap: 20px;
+        column-gap: 10px; */
+ 
+        /* flex vs grid */
+        /* flex - 1D */
+        /* grid - 2D */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem.
+      </div>
+      <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem.
+      </div>
+      <div class="box3">
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem.
+      </div>
+ 
+      <div class="box3">
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem. voluptatem. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptatem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem. voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Voluptatibus, voluptatem.
+      </div>
+ 
+      <div class="box3">
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+ 
+      <div class="box3">
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem. us, voluptatem.
+      </div>
+    </section>
+  </body>
+</html>
+
+<!-- flex vs grid -->
+<!-- Can use both, and inside each other.
+flex understands 1d(tries to keep everything in one line, doesnt try and align one below the other with wrap.).
+grid understands 2d (side by side and below)-->

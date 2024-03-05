@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            background: plum;
+            height: 300px;
+            width: 300px;
+        }
+
+        @media (min-width: 425px){
+            /* like commented code between 0-425px */
+            .box1{
+                background: crimson;
+            }
+        }
+
+        @media (min-width: 900px){
+            /* like commented code between 0-900px */
+            .box1{
+                background: purple;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
