@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+
+        .container{
+            background-color: orange;
+            width: 50%;
+        }
+
+        p{
+            background-color: purple;
+        }
+
+        .web{
+            /* convert inline to block. Because they don't respect height and width.
+            block does. */
+            display: inline-block;
+            height: 400px;
+            width: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <a class="web" href="">Google.coom</a><a ref="">Link</a>
+    <!-- display: block, by default. Occupy full width of container. -->
+    <p>para 1</p><p>para 2</p>
+
+    <!-- display: inline, by default. Only occupy content width -->
+    <a>link</a>
+    <a>link</a>
+
+    <div class="container">
+        <p>para 3</p><p>para 4</p>
+    </div>
+
+    <img
+      src=""
+      alt=""
+      />
+</body>
+</html>
+
+<!-- block elements: p, div, header -->
+<!-- inline elements: a, img(inline-block) -->
+<!-- inline-block is a hybrid of inline and block -->

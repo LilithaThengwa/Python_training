@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .movie-container{
+            text-align: center;
+            max-width: 375px;
+            font-family: sans-serif;
+        }
+
+        .poster{
+            height: 450px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+
+        .movie-content{
+            padding: 0px 16px;
+        }
+
+        .separator, .movie-summary{
+            line-height: 1.3;
+        }
+
+        .movie-name{
+            font-size: 32px;
+            margin: 0px;
+            color: white;
+        }
+
+        .movie-spec{
+            color: hsl(0, 17%, 59%);
+        }
+
+        body{
+            background-image: linear-gradient(20deg, #5a0303, #47060d, #32090f, #1f070c, #000000);
+            margin: 0;
+            display: grid;
+            place-content: center;
+            min-height: 100vh
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-container">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.rLhOD7wKcF4s8g_SvdQ7UwHaJ4?rs=1&pid=ImgDetMain" alt="" class="poster"/>
+        <div class="movie-content">
+            <h2 class="movie-name">Maul</h2>
+            <p class="movie-spec">TBD
+                <a class="separator">·</a> Action
+                <a class="separator">·</a>TBD
+            </p>
+            <p class="movie-summary">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Veniam, placeat. Sint ipsam alias quod, placeat blanditiis 
+                totam quis rerum illo, harum, modi maiores ipsa. Sed, 
+                similique aspernatur! Odio, molestiae praesentium.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

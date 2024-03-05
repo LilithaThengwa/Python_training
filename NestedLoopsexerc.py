@@ -98,14 +98,14 @@ def find_avg(nums):
   return round(sum(nums) / len(nums), 2)
 
 
-# classes_avg = {}
+classes_avg = {}
 
-# for cls_name, students in classes.items():
-#   class_students_avg = []
-#   for student in students:
-#     class_students_avg.append(find_avg(student['grades']))
-#   classes_avg[cls_name] = find_avg(class_students_avg)
-# print(classes_avg)
+for cls_name, students in classes.items():
+  class_students_avg = []
+  for student in students:
+    class_students_avg.append(find_avg(student['grades']))
+  classes_avg[cls_name] = find_avg(class_students_avg)
+print(classes_avg)
 
 # students_avg_dict = {}
 # for cls_name, students in classes.items():
@@ -118,9 +118,9 @@ def find_avg(nums):
 
 # Task 2 with comprehension
 
-students_avg_dict = { cls_name: {student['name']: find_avg(student['grades'])
-   for student in students}
-  for cls_name, students in classes.items()
-}
+# students_avg_dict = { cls_name: {student['name']: find_avg(student['grades'])
+#    for student in students}
+#   for cls_name, students in classes.items()
+# }
 
-print(students_avg_dict)
+# print(students_avg_dict)

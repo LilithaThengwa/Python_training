@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* inherited */
+            color: purple;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+
+            /* not inherited */
+            background: rgb(87, 45, 87);
+            border: 4px solid palevioletred;
+            height: 500px;
+            padding: 16px;
+            margin: 10px;            
+        }
+
+        .img{
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+
+            /* zoom in */
+            object-fit: cover;
+
+            /* zoom out */
+            /* object-fit: contain; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quae, harum consectetur suscipit accusantium quisquam tenetur qui nobis sapiente vero rerum consequuntur temporibus quo itaque dolorem quod debitis porro vel!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste aliquam provident optio voluptatem excepturi fugit? Similique, ipsam aut facere deleniti repellendus quod, molestiae dolores sint quae sapiente eos soluta aperiam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim debitis quos dolorum fuga dolor laboriosam consequatur sapiente culpa unde ipsa eveniet labore repellat laudantium aliquid, vel, inventore nemo perspiciatis! Voluptatum!</p>
+    </div>
+
+    <img class="img" src="https://tse4.mm.bing.net/th/id/OIP.AF0olHW9wzGqAts2yaRi_gAAAA?rs=1&pid=ImgDetMain" alt="">
+</body>
+</html>
