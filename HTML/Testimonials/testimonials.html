@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .parentcont{
+      text-align: center;
+      font-family: sans-serif;
+      padding-left: 100px; 
+      padding-right: 100px; *
+    }
+
+    .pic{
+      border-radius: 50%;
+      height: 75px;
+    }
+
+    .heading{
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-family: serif;
+      opacity: 0.4;
+      text-align: center;
+      padding-top: 90px;
+      padding-bottom: 60px;
+    }
+
+    .opinion{
+      /* padding-left: 100px; 
+      padding-right: 100px; */
+      padding-bottom: 10px;
+    }
+
+    .name{
+      font-weight: 900;
+      font-family: serif;
+    }
+
+    .title{
+      padding-bottom: 50px;
+      opacity: 0.5;
+    }
+
+    @media (min-width: 885px){
+      .parentcont{
+        /* display: flex;  */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    
+    .body{
+        margin: 0;
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+    }
+
+    .person{
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <h3 class="heading">Client testimonials</h3>
+  <section class="parentcont"> 
+
+  <div class="person"><img src=".\images\image-emily.jpg" alt="" class="pic" />
+    <p class=opinion>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+    <p class="name">Emily R.</p>
+    <p class="title">Marketing Director</p></div>
+
+  <div class="person"><img class="pic" src=".\images\image-thomas.jpg" alt="">
+  <p class="opinion">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+  <p class="name">Thomas S.</p>
+  <p class="title">Chief Operating Officer</p></div>
+
+  <div class="person">
+    <img class="pic" src=".\images\image-jennie.jpg" alt="">
+  <p class="opinion">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+  <p class="name">Jennie F.</p>
+  <p class=title>Business Owner</p>
+</div>
+  
+  </section>
+</body>
+</html>
