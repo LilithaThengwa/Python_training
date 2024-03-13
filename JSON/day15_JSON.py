@@ -174,4 +174,19 @@ with open("post_summary.json", "w") as file:
 #     }
 #   ]
 # }
+    
+#     with open("blog_post.json", "r") as file:
+#     ans = json.load(file)
+ 
+# output3 = [
+#     {
+#         "title": post["title"],
+#         "author": post["author"],
+#         "number_of_comments": len(post["comments"]),
+#     }
+#     for post in ans["posts"]
+# ]
+ 
+# with open("post_summary.json", "w") as file:
+#     json.dump(output3, file, indent=4)
  
